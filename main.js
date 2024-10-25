@@ -45,8 +45,8 @@ table.appendChild(tablehead);
 table.appendChild(tablebody);
 tablehead.appendChild(tableheadrow);
 for (let i =0; i<valami.length;i++){
-    const th = document.createElement('th')
-    th.innerHTML=valami.th[i]
+    const th = createtablecell('th',valami[i].th,tableheadrow)
+    th.innerHTML=valami[i].th
     
     if (valami[i]===2){
         th.colspan =valami[i].colspan
@@ -159,6 +159,7 @@ function createtablecell(htmlElement, innerHTML, parentElement) {
     const asd = document.createElement(htmlElement);
     asd.innerHTML = innerHTML;
     parentElement.appendChild(asd);
+    return asd
 }
 
 
