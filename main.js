@@ -127,7 +127,11 @@ form.addEventListener('submit', function(e) {
         console.log(array);
         tablebody.innerHTML = "";
         renderTable();
+        form.reset()
     }
+
+
+
 });
 
 
@@ -192,5 +196,11 @@ function renderTable() {
         allat.innerHTML = person.pet;
 
         tablebody.appendChild(tr);
+
+
     }
+
+    
 }
+
+
